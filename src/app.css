@@ -1,0 +1,93 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: "GTAmerica";
+  src: url("/GTAmerica-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("/freighttext-bolditalic.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@layer utilities {
+  .border-dense-dotted {
+    border-style: dotted;
+    border-width: 1px;
+    border-color: theme('colors.primary.100');
+    flex: 1 1 0%;
+  }
+  .custom-bullet {
+    align-items: center;
+  }
+  .custom-bullet::before {
+    content: '';
+    display: inline-block;
+    width: 0.75rem; /* Adjust size as needed */
+    height: 0.75rem; /* Adjust size as needed */
+    margin-right: 0.25rem;
+
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m128 62.6-38.3 6.6c-9.9 1.7-17.6 9.6-18.9 19.6L65.4 128l-6.6-38.3c-1.7-9.9-9.6-17.6-19.6-18.9L0 65.4l38.3-6.6c9.9-1.7 17.6-9.6 18.9-19.6L62.6 0l6.6 38.3c1.7 9.9 9.6 17.6 19.6 18.9l39.2 5.4z" fill="%232E6F40"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .markdown {
+    font-family: GTAmerica;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .markdown h1 {
+    padding-bottom: .3em;
+    font-size: 2em;
+    border-bottom: 1px solid #ddd;
+    margin-top: 42px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .markdown h2 {
+    padding-bottom: .3em;
+    font-size: 2em;
+    border-bottom: 1px solid #ddd;
+    margin-top: 42px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .markdown p {
+    margin-bottom: 1.2rem;
+  }
+
+  .markdown figure {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .markdown figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+
+  @media only screen and (orientation: landscape) {
+    .markdown {
+      max-width: 760px;
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+}
+}
+

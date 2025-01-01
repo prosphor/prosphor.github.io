@@ -1,0 +1,307 @@
+favorites:
+  media:
+  - category: book
+    value: >-
+      The Brothers Karamazov
+      -
+      Fyodor Dostoevsky (Pevear & Volokhonsky)
+    link: null
+
+  - category: manga
+    value: >-
+      Mairimashita! Iruma-kun
+      -
+      Nishi Osamu
+    link: null
+
+  - category: q&a
+    value: >-
+      George Saunders on the Best Writing Advice He’s Received
+      -
+      Literary Hub
+    link: https://lithub.com/george-saunders-on-the-best-writing-advice-hes-received/
+
+  - category: news article
+    value: >-
+      An Oral History of Lilo & Stitch
+      -
+      Bilge Ebiri
+    link: https://www.vulture.com/article/oral-history-of-lilo-and-stitch-a-hand-drawn-miracle.html
+
+  - category: blogpost
+    value: >-
+      What do I think about biometric proof of personhood?
+      -
+      Vitalik Buterin
+    link: https://vitalik.eth.limo/general/2023/07/24/biometric.html
+
+  - category: movie
+    value: >-
+      Parasite
+      - 
+      Bong Joon-ho
+    link: null
+
+  - category: season of tv
+    value: >-
+      Arcane S1
+      -
+      Christian Linke, Alex Yee
+    link: null
+
+  - category: miniseries
+    value: >-
+      Game of Zones
+      -
+      Adam Malamut, Craig Malamut
+    link: https://www.youtube.com/watch?v=St5PLcxZy44&list=PLoqDIJHlyN3MILa6OxxoRVR386K622KXW
+
+  - category: documentary
+    value: >-
+      The Fog of War
+      -
+      Errol Morris
+    link: null
+
+  - category: album
+    value: >-
+      The College Dropout
+      -
+      Kanye West
+    link: null
+
+  - category: performance
+    value: >-
+      i
+      -
+      Kendrick Lamar
+    link: https://www.youtube.com/watch?v=sop2V_MREEI
+
+  - category: play
+    value: >-
+      Much Ado About Nothing
+      -
+      Oregon Shakespeare Festival
+    link: null
+    
+  - category: musical
+    value: >-
+      Wicked
+      -
+      Broadway
+    link: null
+
+  people:
+  - category: historical figure
+    value: Leonardo da Vinci
+    link: null
+
+  - category: tech figure
+    value: Steve Jobs
+    link: null
+
+  - category: athlete
+    value: Roger Federer
+    link: null
+
+  - category: comedian
+    value: Tim Robinson
+    link: null
+
+  places:
+  - category: museum
+    value: Museum of Modern Art
+    link: https://www.moma.org/
+
+  - category: park
+    value: Yellowstone
+    link: https://www.nps.gov/yell/index.htm
+
+  - category: ski resort
+    value: Wolf Creek
+    link: https://wolfcreekski.com/
+
+  - category: Pittsburgh restaurant
+    value: FET-FISK
+    link: https://www.fetfisk.net/
+
+  - category: Seattle restaurant
+    value: Local Tide
+    link: https://www.localtide.com/
+
+  things:
+    - category: sports team
+      value: Dallas Mavericks
+      link: null
+
+    - category: fast-food chain
+      value: Whataburger
+      link: null
+
+    - category: instrument
+      value: electric guitar
+      link: null
+
+    - category: fruit
+      value: mango
+      link: null
+
+    - category: website
+      value: Wikipedia
+      link: https://www.wikipedia.org/
+
+    - category: mobile app
+      value: Beli
+      link: https://beliapp.com/
+
+likes:
+  albums:
+  - value: >-
+      Blonde
+      -
+      Frank Ocean
+    link: null
+
+  - value: >-
+      Cilvia Demo
+      -
+      Isaiah Rashad
+    link: null
+
+  - value: >-
+      Imaginal Disk
+      -
+      Magdalena Bay
+    link: null
+
+  - value: >-
+      KIDS SEE GHOSTS
+      -
+      KIDS SEE GHOSTS
+    link: null
+
+  - value: >-
+      Lift Your Skinny Fists like Antennas to Heaven
+      -
+      Godspeed You! Black Emperor
+    link: null
+
+  - value: >-
+      Songs From The Big Chair
+      -
+      Tears For Fears
+    link: null
+
+  - value: >-
+      Trilogy
+      -
+      The Weeknd
+    link: null
+
+  books:
+  - value: >-
+      Pachinko
+      -
+      Min Jin Lee
+    link: null
+
+  - value: >-
+      The Paper Menagerie
+      -
+      Ken Liu
+    link: null
+
+  - value: >-
+      The Song of Solomon
+      -
+      Toni Morrison
+    link: null
+
+  manga:
+  - value: >-
+      Grand Blue
+      -
+      Inoue Kenji, Yoshioka Kimitake
+    link: null
+
+  - value: >-
+      Kaguya-sama: Love is War
+      -
+      Akasaka Aka
+    link: null
+
+  - value: >-
+      Monster
+      -
+      Urasawa Naoki
+    link: null
+
+  - value: >-
+      One Piece
+      -
+      Oda Eiichiro
+    link: null
+
+  - value: >-
+      Skip & Loafer
+      -
+      Takamatsu Misaki
+    link: null
+
+  reading material:
+  - value: >-
+      An app can be a home-cooked meal
+      -
+      Robin Sloan
+    link: https://www.robinsloan.com/notes/home-cooked-app/
+
+  - value: >-
+      A Left-Handed Commencement Address
+      -
+      Ursula K. Le Guin
+    link: https://www.ursulakleguin.com/lefthand-mills-college
+
+  internet accounts:
+  - value: "@3blue1brown - YouTube"
+    link: null
+
+  - value: "@JKenjiLopezAlt - YouTube"
+    link: null
+
+  - value: "@theneedledrop - YouTube"
+    link: null
+
+  - value: "@videogamedunkey - YouTube"
+    link: null
+
+  - value: "@visakanv - Twitter"
+    link: null
+
+  - value: "@wisdm8 - TikTok"
+    link: null
+
+  educational resources:
+  - value: Introduction to Investing and Finance
+    link: https://www.youtube.com/watch?v=VI_riscmviI
+    
+  - value: Kubernetes The Hard Way
+    link: https://github.com/kelseyhightower/kubernetes-the-hard-way
+
+  - value: Practical Deep Learning for Coders
+    link: https://course.fast.ai/
+
+  products:
+  - value: AirPods
+    link: null
+
+  - value: ANESSA sunscreen milk
+    link: null
+
+  - value: KEWPIE Mayonnaise
+    link: null
+
+  - value: Le Labo THÉ MATCHA 26
+    link: null
+
+  - value: NewBalance 2002R
+    link: null
