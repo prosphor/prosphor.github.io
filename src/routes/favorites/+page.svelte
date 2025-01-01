@@ -21,7 +21,6 @@
         </p>
       </div>
       <div class="text-lg mt-4">
-        <div>{@html renderSections(favs)}</div>
       </div>
       <div class="text-lg mt-4">
         <p class="mb-4 w-full sm:w-3/4 lg:w-[420px]">
@@ -31,7 +30,6 @@
         <details>
         <summary class="mb-2">good™</summary>
         <div class="px-4">
-          {@html renderMisc(good)}
         </div>
       </details>
       </div>
