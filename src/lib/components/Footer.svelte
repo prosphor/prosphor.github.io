@@ -8,6 +8,16 @@
     <a href="https://github.com/prosphor" target="_blank" rel="noopener noreferrer" class="hover:underline">
       github
     </a>
+    <br />
+    <a href="https://www.goodreads.com/user/show/184710833-nick-zhong" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      goodreads
+    </a>
+    |
+    <a href="https://letterboxd.com/prosphor/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      letterboxd
+    </a>
+    <br />
+    @prosphor on youtube, tiktok, beli, mangadex
     <br>
     —
     <br>
