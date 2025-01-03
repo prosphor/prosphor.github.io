@@ -15,9 +15,9 @@ export default {
       },
       colors: {
         primary: {
-          100: '#177d34',
-          200: '#fbfffb',
-          300: '#5F9EA0',
+          100: '#177d34', // green
+          110: '#5F9EA0', // foam green
+          200: '#ffffff', // off white 
         },
       }
     }

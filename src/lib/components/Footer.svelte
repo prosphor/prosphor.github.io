@@ -1,14 +1,9 @@
-
-<script>
-  import { base } from "$app/paths";
-  import { page } from '$app/stores';
-</script>
 <footer class="font-americas text-primary-100 mx-12 mt-[calc(2vh+2vw)] pb-8">
-  <div class="w-full sm:w-3/4 md:w-[420px]">
-    <a href="https://github.com/prosphor" target="_blank" rel="noopener noreferrer" class="hover:underline">
-      github
+  <div class="responsive-width">
+    <a href="https://open.spotify.com/user/14ar49bt5t17yc5qs42ubxrsc?si=42da7107b2404064" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      spotify
     </a>
-    <br />
+    |
     <a href="https://www.goodreads.com/user/show/184710833-nick-zhong" target="_blank" rel="noopener noreferrer" class="hover:underline">
       goodreads
     </a>
@@ -17,7 +12,16 @@
       letterboxd
     </a>
     <br />
-    @prosphor on youtube, tiktok, beli, mangadex
+    @prosphor on 
+    <a href="https://github.com/prosphor" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      github
+    </a>,
+    <a href="https://mangadex.org/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      mangadex
+    </a>,
+    <a href="https://beliapp.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      beli
+    </a>
     <br>
     —
     <br>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
   import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte";
+  import MinimalFooter from "$lib/components/MinimalFooter.svelte";
 </script>
 
 <Seo
@@ -12,10 +12,15 @@
 <Header />
 
 <article class="mx-12 text-primary-100 font-americas text-lg">
-  <main class="flex w-full mt-[calc(2vh+2vw)] mb-4">
-    <div id="left-pane" class="w-full sm:w-3/4 lg:w-[640px]">
+  <main class="flex w-full mt-12 mb-4">
+    <div id="left-pane" class="responsive-width">
       <div class="">
-        <p class="w-full sm:w-3/4 lg:w-[420px]"> 
+        <p class="font-americas text-xl">
+          <span class="font-freight text-2xl font-bold italic underline">
+            favorites
+          </span>
+        </p>
+        <p> 
           I put a lot of stock in other people's favorites. <br />
           Here are some of mine:
         </p>
@@ -23,7 +28,7 @@
       <div class="text-lg mt-4">
       </div>
       <div class="text-lg mt-4">
-        <p class="mb-4 w-full sm:w-3/4 lg:w-[420px]">
+        <p class="mb-4">
           ...and here are some quality things that are not
           necessarily my favorite:
         </p>
@@ -41,7 +46,7 @@
   </main>
 </article>
 
-<Footer />
+<MinimalFooter />
 
 <style>
 </style>

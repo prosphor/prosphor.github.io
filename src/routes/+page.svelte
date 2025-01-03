@@ -11,7 +11,7 @@
 
 <article class="mx-12 text-primary-100 font-americas text-xl">
   <main>
-    <p class="mt-[calc(2vh+2vw)] paragraph-width">
+    <p class="mt-[calc(2vh+2vw)] responsive-width">
       <a
         href="mailto:zhongxnicholas@gmail.com"
         target="_blank"
@@ -28,13 +28,10 @@
     <div class="text-xl">
       interests:
       <ul>
-        <li><Link text="sharing stories" /></li>
         <li><Link text="content moderation" /></li>
-        <li><Link text="fitness + cooking" /></li>
+        <li><Link text="sharing stories" /></li>
       </ul>
     </div>
-    <br />
-    carnegie mellon ece grad
     <br />
     based in <Link text="new york" /> and <Link text="singapore" />
     <br />
@@ -54,21 +51,5 @@
 
   ul li::before {
     content: "– ";
-  }
-
-  .paragraph-width {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .paragraph-width {
-      width: 75%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .paragraph-width {
-      width: 420px;
-    }
   }
 </style>

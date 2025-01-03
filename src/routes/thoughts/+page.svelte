@@ -1,7 +1,7 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
   import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte";
+  import MinimalFooter from "$lib/components/MinimalFooter.svelte";
   import thoughts from "$lib/thoughts/thoughts.yaml";
   import Checkmark from "$lib/components/Checkmark.svelte";
   import Downarrow from "$lib/components/Downarrow.svelte";
@@ -52,15 +52,20 @@
 
 <Seo
   title="Nick Zhong"
-  description="The pen moves of its own volition, I am only asked to lay paper before it. Too often I forget"
+  description="The pen moves of its own volition; I am only asked to lay paper before it. Too often I forget."
 />
 
 <Header />
 
 <article class="mx-12 text-primary-100">
   <main>
+    <p class="font-americas text-xl w-full mt-12 mb-4 responsive-width">
+      <span class="font-freight text-2xl font-bold italic underline">
+        thoughts
+      </span>
+    </p>
     {#if !isIntroVisited}
-      <section class="layout-md paragraph-width mt-12">
+      <section class="layout-md paragraph-width">
         {#each thoughts.starter as thought}
           <a
             class="block hover:bg-gray-100 py-1 px-2"
@@ -68,11 +73,11 @@
             href={`/thoughts/${thought.filename}`}
           >
             <div class="thought font-americas">
-              <div class="text-xl">
+              <div>
                 {thought.title}
               </div>
             </div>
-            <div class="font-freight italic">
+            <div class="font-freight text-sm italic">
               {thought.summary}
             </div>
           </a>
@@ -212,7 +217,7 @@
   </main>
 </article>
 
-<Footer />
+<MinimalFooter />
 
 <style>
   .thought {

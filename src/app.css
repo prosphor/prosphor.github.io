@@ -23,6 +23,7 @@
     border-color: theme('colors.primary.100');
     flex: 1 1 0%;
   }
+
   .custom-bullet {
     align-items: center;
   }
@@ -37,6 +38,22 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .responsive-width {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-width {
+      width: 75%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .responsive-width {
+      width: 420px;
+    }
   }
 
   .markdown {
