@@ -33,6 +33,7 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"autoprefixer": "^10.4.20",
 		"js-yaml": "^4.1.0",
+		"katex": "^0.16.19",
 		"marked": "^15.0.4"
 	}
 }

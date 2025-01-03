@@ -20,15 +20,12 @@ export async function load({ params }: { params: { slug: string } }) {
 
   const titleLine = lines[1];
   const title = titleLine.replace("title:", "").trim().replace(/^"(.*)"$/, "$1");
-  const authorLine = lines[2];
-  const author = authorLine.replace("author:", "").trim().replace(/^"(.*)"$/, "$1");
-  const dateLine = lines[3];
+  const dateLine = lines[2];
   const date = dateLine.replace("publish-date:", "").trim().replace(/^"(.*)"$/, "$1");
-  const markdownContent = lines.slice(5).join("\n");
+  const markdownContent = lines.slice(4).join("\n");
 
   const postData: PostData = {
     title: title,
-    author: author,
     date: date,
     body: markdownContent,
   };

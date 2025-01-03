@@ -27,6 +27,7 @@
   .custom-bullet {
     align-items: center;
   }
+
   .custom-bullet::before {
     content: '';
     display: inline-block;
@@ -65,32 +66,70 @@
   }
 
   .markdown h1 {
-    padding-bottom: .3em;
     font-size: 2em;
+    font-weight: 700;
     border-bottom: 1px solid #ddd;
-    margin-top: 42px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    line-height: 1.25;
+    margin-bottom: 4px;
   }
 
   .markdown h2 {
-    padding-bottom: .3em;
-    font-size: 2em;
-    border-bottom: 1px solid #ddd;
-    margin-top: 42px;
-    margin-bottom: 16px;
+    font-size: 1.5em;
     font-weight: 600;
-    line-height: 1.25;
+    border-bottom: 1px solid #ddd;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .markdown p {
+    line-height: 1.2rem;
     margin-bottom: 1.2rem;
   }
 
+  .markdown a {
+    color: #337ab7;
+  }
+
+  .markdown a:hover {
+    text-decoration: underline;
+  }
+
+  .markdown ol {
+    list-style-type: decimal; 
+    line-height: 1.2rem;
+    margin-left: 20px;
+  }
+
+  .markdown ol>li {
+    margin-bottom: 0.8rem;
+  }
+
+  .markdown ul {
+    list-style-type: disc;
+    line-height: 1.2rem;
+    margin-left: 20px;
+    
+  }
+
+  .markdown ul>li {
+    margin-bottom: 0.2rem;
+  }
+
+  .markdown blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    color: #555;
+    font-style: italic;
+    margin: 20px 0;
+  }
+
   .markdown figure {
-    margin: 1.5rem 0;
     text-align: center;
+  }
+
+  .markdown figure>img {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 320px;
   }
 
   .markdown figcaption {

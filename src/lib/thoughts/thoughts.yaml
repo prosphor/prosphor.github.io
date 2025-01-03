@@ -1,8 +1,8 @@
 starter:
   - title: "Introduction"
     author: Nick Zhong
-    date-published: 2024-12-30T4:58:00
-    last-updated: 2024-12-30T4:58:00
+    date-published: 2024-12-31T00:00:00
+    last-updated: 2024-12-31T00:00:00
     filename: introduction
     summary: >
       Please Read This First
@@ -10,19 +10,19 @@ starter:
 published:
   - title: "Year in Review: 2024"
     author: Nick Zhong
-    date-published: 2024-12-31T4:59:00
-    last-updated: 2024-12-31T4:59:00
+    date-published: 2024-12-31T00:00:00
+    last-updated: 2024-12-31T00:00:00
     filename: year-in-review-2024
     summary: >
       Looking Back On 2024
 
   - title: "2025 Resolutions"
     author: Nick Zhong
-    date-published: 2025-01-01T16:09:00
-    last-updated: 2025-01-01T16:10:00
+    date-published: 2025-01-01T00:00:00
+    last-updated: 2025-01-01T00:00:00
     filename: 2025-resolutions
     summary: >
-      Actionable New Year's Resolutions
+      Actionable Goals for the New Year
 
 drafts:
   - title: "Lessons From Acting"

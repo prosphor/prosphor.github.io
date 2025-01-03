@@ -14,7 +14,6 @@ type Thought = {
 
 type PostData = {
   title: string;
-  author: string;
   date: string;
   body: string;
 };

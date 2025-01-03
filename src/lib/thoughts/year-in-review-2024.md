@@ -1,7 +1,6 @@
 ---
 title: "Year in Review: 2024"
-author: Nick Zhong
-publish-date: 2024 Dec 31
+publish-date: December 31, 2024
 ---
 They say the years grow shorter as you grow older, but 2024 has undoubtedly been the longest year of my life thus far.
 
