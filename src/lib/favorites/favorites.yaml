@@ -1,4 +1,4 @@
-favorites:
+favs:
   media:
   - category: book
     value: >-
@@ -49,11 +49,11 @@ favorites:
       Christian Linke, Alex Yee
     link: null
 
-  - category: miniseries
+  - category: mini-series
     value: >-
       Game of Zones
       -
-      Adam Malamut, Craig Malamut
+      Adam & Craig Malamut
     link: https://www.youtube.com/watch?v=St5PLcxZy44&list=PLoqDIJHlyN3MILa6OxxoRVR386K622KXW
 
   - category: documentary
@@ -68,27 +68,6 @@ favorites:
       The College Dropout
       -
       Kanye West
-    link: null
-
-  - category: performance
-    value: >-
-      i
-      -
-      Kendrick Lamar
-    link: https://www.youtube.com/watch?v=sop2V_MREEI
-
-  - category: play
-    value: >-
-      Much Ado About Nothing
-      -
-      Oregon Shakespeare Festival
-    link: null
-    
-  - category: musical
-    value: >-
-      Wicked
-      -
-      Broadway
     link: null
 
   people:

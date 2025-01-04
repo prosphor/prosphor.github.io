@@ -15,37 +15,44 @@
     thoughts: "primary-120",
     favorites: "primary-130",
   };
+
+  function navLinkClasses(key: string) {
+    const color = colors[page];
+    const isActive = (page === key);
+    const base =
+      'flex flex-grow text-2xl font-thin flex items-center justify-center h-[2.5rem]';
+
+    if (isActive) {
+      return [
+        base,
+        `bg-${color}`,
+        'text-primary-200'
+      ].join(' ');
+    } else {
+      return [
+        base,
+        `text-${color}`,
+        'border',
+        `border-${color}`,
+        `hover:bg-${color}`,
+        'hover:text-primary-200'
+      ].join(' ');
+    }
+  }
   
 </script>
 
 <header class="text-lg">
   <nav class="flex font-sk">
     {#each navItems as { label, href, key }}
-        <a
-          {href}
-          class="flex flex-grow text-2xl font-thin flex items-center justify-center h-[2.5rem]"
-          class:bg-primary-100={page === key && colors[page] === "primary-100"}
-          class:bg-primary-110={page === key && colors[page] === "primary-110"}
-          class:bg-primary-120={page === key && colors[page] === "primary-120"}
-          class:bg-primary-130={page === key && colors[page] === "primary-130"}
-          class:text-primary-200={page === key}
-          class:text-primary-100={page !== key && colors[page] === "primary-100"}
-          class:text-primary-110={page !== key && colors[page] === "primary-110"}
-          class:text-primary-120={page !== key && colors[page] === "primary-120"}
-          class:text-primary-130={page !== key && colors[page] === "primary-130"}
-          class:border={page !== key}
-          class:border-primary-100={colors[page] === "primary-100"}
-          class:border-primary-110={colors[page] === "primary-110"}
-          class:border-primary-120={colors[page] === "primary-120"}
-          class:border-primary-130={colors[page] === "primary-130"}
-          class:hover:bg-primary-100={colors[page] === "primary-100" && page !== key}
-          class:hover:bg-primary-110={colors[page] === "primary-110" && page !== key}
-          class:hover:bg-primary-120={colors[page] === "primary-120" && page !== key}
-          class:hover:bg-primary-130={colors[page] === "primary-130" && page !== key}
-          class:hover:text-primary-200={page !== key}
-        >
-          {label}
-        </a>
+      <a
+        href={href}
+        target={key === 'cv' ? '_blank' : '_self'}
+        rel="noopener noreferrer"
+        class={navLinkClasses(key)}
+      >
+        {label}
+      </a>
     {/each}
   </nav>
 </header>

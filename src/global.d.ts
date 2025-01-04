@@ -1,4 +1,5 @@
 /// <reference types="@sveltejs/kit" />
+/// <reference types="@modyfi/vite-plugin-yaml/modules" />
 
 declare module "*.yaml";
 
