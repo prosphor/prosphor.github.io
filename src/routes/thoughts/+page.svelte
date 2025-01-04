@@ -9,7 +9,7 @@
   import { onMount } from "svelte";
   let visited: string[] = $state([]);
   let isDropdownOpen = $state(false);
-  let sortField = $state("date-published");
+  let sortField = $state("last-updated");
   let sortOrder = $state("desc");
 
   const isIntroVisited = $derived(visited.includes("introduction"));
@@ -55,12 +55,14 @@
   description="The pen moves of its own volition; I am only asked to lay paper before it. Too often I forget."
 />
 
-<Header page="thoughts"/>
+<Header page="thoughts" />
 
 <article class="font-freight text-[20px] text-primary-120">
   <main class="mt-[1.75rem]">
     <p>
-      <span class="responsive-width font-freight text-[28px] font-bold italic underline">
+      <span
+        class="responsive-width font-freight text-[28px] font-bold italic underline"
+      >
         thoughts
       </span>
     </p>
@@ -89,7 +91,7 @@
       <p class="mr-1 pt-0.5">Sort By:</p>
       <div class="relative">
         <button
-          class="bg-primary-120 text-primary-200 flex items-center justify-center pl-2 pr-2 pt-0.5"
+          class="bg-primary-120 text-primary-200 flex items-center justify-center pl-2.5 pr-1.5 pt-0.5"
           onclick={toggleDropdown}
         >
           Time
@@ -99,42 +101,9 @@
           <div
             class="absolute right-0 py-1 w-48 bg-primary-200 border border-gray-200 shadow-md z-50"
           >
-            <p class="px-4 py-1 text-primary-120 font-semibold border-b border-primary-120">
-              Date Published
-            </p>
-            <button
-              class="mt-0.5 w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("date-published", "desc")}
+            <p
+              class="px-4 py-1 text-primary-120 font-bold border-b border-primary-120"
             >
-              <span>Newest First</span>
-              {#if isActive("date-published", "desc")}
-                <Checkmark />
-              {/if}
-            </button>
-            <button
-              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("date-published", "asc")}
-            >
-              <span>Oldest First</span>
-              {#if isActive("date-published", "asc")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              {/if}
-            </button>
-
-            <p class="px-4 py-1 text-primary-120 font-bold border-b border-primary-120">
               Last Updated
             </p>
             <button
@@ -181,6 +150,42 @@
                 </svg>
               {/if}
             </button>
+            <p
+              class="px-4 py-1 text-primary-120 font-semibold border-b border-primary-120"
+            >
+              Date Published
+            </p>
+            <button
+              class="mt-0.5 w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
+              onclick={() => handleSort("date-published", "desc")}
+            >
+              <span>Newest First</span>
+              {#if isActive("date-published", "desc")}
+                <Checkmark />
+              {/if}
+            </button>
+            <button
+              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
+              onclick={() => handleSort("date-published", "asc")}
+            >
+              <span>Oldest First</span>
+              {#if isActive("date-published", "asc")}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              {/if}
+            </button>
           </div>
         {/if}
       </div>
@@ -210,7 +215,7 @@
   </main>
 </article>
 
-<MinimalFooter page="thoughts"/>
+<MinimalFooter page="thoughts" />
 
 <style>
   .thought {

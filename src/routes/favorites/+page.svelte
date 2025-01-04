@@ -9,11 +9,12 @@
   const likes = data.favorites.likes;
 
   let preview: string = $state("");
-  let caption: string = $state("");
 
-  function handleHover(src: string, desc: string) {
+  function handleHover(src: string) {
     preview = src || "";
-    caption = desc || "";
+  }
+  function handleUnhover() {
+    preview = "";
   }
 </script>
 
@@ -50,7 +51,10 @@
                         class="hover:underline"
                         target="_blank"
                       >
-                        <li onmouseenter={() => handleHover(item.src, item.caption)}>
+                        <li
+                          onmouseenter={() => handleHover(item.src)}
+                          onmouseleave={() => handleUnhover()}
+                        >
                           <span class="font-bold">{item.category}</span>:
                           {item.value}
                         </li>
@@ -86,7 +90,8 @@
                         {#if item.link}
                           <a
                             href={item.link}
-                            onmouseenter={() => handleHover(item.src, item.caption)}
+                            onmouseenter={() => handleHover(item.src)}
+                            onmouseleave={() => handleUnhover()}
                             class="hover:underline"
                             target="_blank"
                           >
@@ -111,7 +116,6 @@
       >
         <div class="fixed top-1/2 transform -translate-y-1/2">
           <img alt="preview" class="w-[400px] h-auto" src={preview} />
-          <div class="italic mt-2 text-center">{caption}</div>
         </div>
       </div>
     {/if}

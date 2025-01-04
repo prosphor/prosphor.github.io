@@ -66,6 +66,8 @@
     header {
       width: 75%;
       margin-top: 3rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
 
@@ -74,6 +76,8 @@
       width: 360px;
       margin-top: 25vh;
       margin-left: 15vw;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 </style>
