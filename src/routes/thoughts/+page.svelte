@@ -57,10 +57,10 @@
 
 <Header />
 
-<article class="mx-12 text-primary-100">
-  <main>
-    <p class="font-americas text-xl w-full mt-12 mb-4 responsive-width">
-      <span class="font-freight text-2xl font-bold italic underline">
+<article class="font-freight text-[20px] text-primary-120">
+  <main class="responsive-width mt-[1.75rem]">
+    <p class="">
+      <span class="font-freight text-[28px] font-bold italic underline">
         thoughts
       </span>
     </p>
@@ -72,12 +72,10 @@
             onclick={() => handleLinkClick(thought)}
             href={`/thoughts/${thought.filename}`}
           >
-            <div class="thought font-americas">
-              <div>
-                {thought.title}
-              </div>
+            <div>
+              {thought.title}
             </div>
-            <div class="font-freight text-sm italic">
+            <div class="text-sm italic">
               {thought.summary}
             </div>
           </a>
@@ -196,19 +194,14 @@
           href={`/thoughts/${thought.filename}`}
           onclick={() => handleLinkClick(thought)}
         >
-          <div
-            class="thought font-americas"
-            
-          >
+          <div class="thought font-americas">
             <div>
               {thought.title}
             </div>
             <span class="spacer"></span>
             <span class="text-sm">{convertToUTC(thought[sortField])}</span>
           </div>
-          <div
-            class="font-freight italic text-sm"
-          >
+          <div class="font-freight font-thin italic text-sm">
             {thought.summary}
           </div>
         </a>
@@ -232,7 +225,7 @@
   }
 
   .visited {
-    color: #5F9EA0;
+    color: #5f9ea0;
     opacity: 0.75;
   }
 

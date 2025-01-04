@@ -1,13 +1,13 @@
 <script>
-  let { text } = $props(); 
+  let { text, link } = $props(); 
 </script>
 
-<span class="hover:underline hover:italic font-bold">
+<a class="hover:underline hover:italic" href={link}>
   { text }
-</span>
+</a>
 
 <style>
-  span {
-    font-family: 'GTAmerica';
+  a {
+    font-family: "Freight";
   }
 </style>

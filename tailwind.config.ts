@@ -12,12 +12,16 @@ export default {
       fontFamily: {
         america: ["GTAmerica"],
         freight: ["Freight"],
+        sk: ["Sim"],
       },
       colors: {
         primary: {
           100: '#177d34', // green
-          110: '#5F9EA0', // foam green
-          200: '#ffffff', // off white 
+          110: '#7d1616',
+          120: '#16167d',
+          130: '#7d6c16',
+          140: '#494949',
+          200: '#ffffff', // white 
         },
       }
     }

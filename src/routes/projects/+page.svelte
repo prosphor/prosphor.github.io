@@ -11,10 +11,10 @@
 
 <Header />
 
-<article class="mx-12 text-primary-100">
-  <main>
-    <p class="mt-12 font-americas text-xl responsive-width">
-      <span class="font-freight text-2xl font-bold italic underline">
+<article class="font-americas text-[24px] text-primary-110">
+  <main class="mt-[1.75rem]">
+    <p class=" responsive-width">
+      <span class="font-freight text-[28px] font-bold italic underline">
         projects
       </span>
     </p>

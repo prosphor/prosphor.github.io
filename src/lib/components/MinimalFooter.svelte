@@ -1,5 +1,5 @@
-<footer class="font-americas text-primary-100 mx-12 mt-[calc(2vh+2vw)] pb-8">
-  <div class="responsive-width">
+<footer class="font-freight text-primary-100 pb-8 mt-8  mx-auto text-center sticky bottom-0 left-0 right-0">
+  <div class="">
     <a href="https://github.com/prosphor" target="_blank" rel="noopener noreferrer" class="hover:underline">
       github
     </a>
@@ -11,5 +11,7 @@
     </p>
 
   </div>
-
 </footer>
+
+<style>
+</style>

@@ -1,29 +1,59 @@
-<script>
-  import { base } from "$app/paths";
-</script>
-
-<header class="text-lg font-freight font-bold mt-[calc(3vh+3vw)] mx-12 text-primary-100">
-  <nav class="flex responsive-width">
-    <div class="flex items-stretch mr-1 flex justify-center items-center">
-      <a href={`${base}/`} class="flex items-center justify-center">
-        <img src="/favico.ico" alt="Icon" class="h-[calc(1.875rem+2px)] w-[calc(1.875rem+2px)] hover:filter hover:hue-rotate-[65deg] hover:saturate-[0.8] hover:brightness-[1.3]">
+<header class="text-lg text-primary-100">
+  <nav class="flex">
+    <div class="flex flex-grow bg-primary-100 justify-center items-center">
+      <a href="/" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
+        钟
       </a>
     </div>
-    <ul class="flex flex-wrap gap-y-0.5 gap-x-0.5 w-full">
-      <li class="border-dense-dotted flex-grow flex justify-center">
-        <a href={`${base}/projects`} class="px-3 py-1 hover:text-primary-110">projects</a>
-      </li>
-      <li class="border-dense-dotted flex-grow flex justify-center">
-        <a href={`${base}/thoughts`} class="px-3 py-1 hover:text-primary-110">thoughts</a>
-      </li>
-      <li class="border-dense-dotted flex-grow flex justify-center">
-        <a href={`${base}/favorites`} class="px-3 py-1 hover:text-primary-110">favorites</a>
-      </li>
-      <li class="border-dense-dotted flex-grow flex justify-center">
-        <a href={`${base}/pdf/Nick_Zhong_CV.pdf`} target="_blank" rel="noopener noreferrer" class="px-3 py-1 hover:text-primary-110">cv</a>
-      </li>
 
-    </ul>
+    <div class="flex flex-grow bg-primary-100 justify-center items-center">
+      <a href="/projects" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
+        工
+      </a>
+    </div>
+
+    <div class="flex flex-grow bg-primary-100 justify-center items-center">
+      <a href="/thoughts" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
+        思
+      </a>
+    </div>
+
+    <div class="flex flex-grow bg-primary-100 justify-center items-center">
+      <a href="/favorites" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
+        喜
+      </a>
+    </div>
+
+    <div class="flex flex-grow bg-primary-100  justify-center items-center">
+      <a href="/pdf/Nick_Zhong_CV.pdf" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
+        历
+      </a>
+    </div>
   </nav>
 </header>
 
+<style>
+    @media (max-width: 640px) {
+    header {
+      width: 100%;
+      margin-top: 3rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    header {
+      width: 75%;
+      margin-top: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    header {
+      width: 360px;
+      margin-top: 25vh;
+      margin-left: 15vw;
+    }
+  }
+</style>

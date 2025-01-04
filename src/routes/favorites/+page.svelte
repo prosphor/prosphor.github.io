@@ -11,7 +11,7 @@
 
 <Header />
 
-<article class="mx-12 text-primary-100 font-americas text-lg">
+<article class="mx-12 text-primary-100 font-americas text-lg leading-[130%]">
   <main class="flex w-full mt-12 mb-4">
     <div id="left-pane" class="responsive-width">
       <div class="">

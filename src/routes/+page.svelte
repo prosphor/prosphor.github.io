@@ -9,35 +9,44 @@
 
 <Header />
 
-<article class="mx-12 text-primary-100 font-americas text-xl">
-  <main>
-    <p class="mt-[calc(2vh+2vw)] responsive-width">
+<article class="text-primary-100 font-americas text-[24px]">
+  <main class="mt-[1.75rem]">
+    <p class="responsive-width">
       <a
         href="mailto:zhongxnicholas@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span class="font-freight text-2xl font-bold italic"> nick zhong</span>
+        <span
+          class="font-freight font-bold italic text-[28px] leading-[100%] mr-0.5"
+        >
+          nick zhong</span
+        >
       </a>
-      is ever-curious, loves a good list, and dislikes handling tasks
-      concurrently.
+      is ever-curious, loves a good list, and dislikes handling tasks concurrently.
 
       <br />
       <br />
     </p>
-    <div class="text-xl">
+    <div class="responsive-width">
       interests:
       <ul>
-        <li><Link text="content moderation" /></li>
-        <li><Link text="sharing stories" /></li>
+        <li><Link text="sharing stories" link="" /></li>
       </ul>
     </div>
-    <br />
-    based in <Link text="new york" /> and <Link text="singapore" />
-    <br />
-    feel free to reach out~
-    <br />
-    <br />
+    <div class="responsive-width">
+      <br />
+      based in
+      <span class="text-[26px] leading-[100%]"
+        ><Link text="singapore" link="" /></span
+      >
+      <br />
+      feel free to reach out<span class="font-freight font-bold text-[28px]"
+        >~</span
+      >
+      <br />
+      <br />
+    </div>
   </main>
 </article>
 
