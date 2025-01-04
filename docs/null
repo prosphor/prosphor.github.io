@@ -6,30 +6,33 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favico.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preload" href="/fonts/freight_text_pro.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/freight-text-pro_700_italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/simkai-limited.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.b_PsNRfH.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/entry.DaehI6Gw.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.rYDOvVMw.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.CVcmBwLA.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.yuyiE_RH.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/render.CusBIkBj.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.DXvYfmN0.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/if.DPAeJxCP.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/props.BtZUitQK.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.6Zrpvn7a.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.exkqAzoV.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.CbbOJYEC.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.Con-uEMa.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.ByP-yWA5.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/render.DRXxf7C3.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.BzgtWTP9.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/if.CRWl0TAm.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/props.Bz3dUIal.js">
 	</head>
 	<body class="bg-primary-200 min-h-screen" data-sveltekit-preload-data="hover">
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_1m5b3ha = {
+					__sveltekit_kilfxy = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.b_PsNRfH.js"),
-						import("/_app/immutable/entry/app.yuyiE_RH.js")
+						import("/_app/immutable/entry/start.6Zrpvn7a.js"),
+						import("/_app/immutable/entry/app.ByP-yWA5.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});

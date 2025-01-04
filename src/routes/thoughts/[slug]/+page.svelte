@@ -43,14 +43,17 @@
   marked.setOptions({ renderer });
 </script>
 
-<article class="markdown">
-  <h1>{data.title}</h1>
-  <div class="text-sm flex justify-between mb-8">
-    <div>
-      {data.date}
+<article class="markdown font-freight">
+  <div class="font-freight">
+    <h1>{data.title}</h1>
+    <div class="text-sm flex justify-between mb-8">
+      <div>
+        {data.date}
+      </div>
+      <a href="/thoughts"> Return to thoughts </a>
     </div>
-    <a href="/thoughts"> Return to thoughts </a>
+  
+    {@html marked(data.body)}
   </div>
 
-  {@html marked(data.body)}
 </article>

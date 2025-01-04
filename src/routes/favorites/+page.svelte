@@ -8,29 +8,13 @@
   const favs = data.favorites.favs;
   const likes = data.favorites.likes;
 
-  const renderMisc = (sections: Record<string, any[]>) => {
-    return Object.entries(sections)
-      .map(([key, items]) => {
-        return `
-          <details>
-            <summary>${key}</summary>
-            <ul>
-              ${items
-                .map(
-                  (item) =>
-                    `<li>
-                      <a ${item.link ? `href="${item.link}" target="_blank"` : ""}>
-                        ${item.value}
-                      </a>
-                    </li>`
-                )
-                .join("")}
-            </ul>
-          </details>
-        `;
-      })
-      .join("");
-  };
+  let preview: string = $state("");
+  let caption: string = $state("");
+
+  function handleHover(src: string, desc: string) {
+    preview = src || "";
+    caption = desc || "";
+  }
 </script>
 
 <Seo
@@ -66,7 +50,7 @@
                         class="hover:underline"
                         target="_blank"
                       >
-                        <li>
+                        <li onmouseenter={() => handleHover(item.src, item.caption)}>
                           <span class="font-bold">{item.category}</span>:
                           {item.value}
                         </li>
@@ -102,6 +86,7 @@
                         {#if item.link}
                           <a
                             href={item.link}
+                            onmouseenter={() => handleHover(item.src, item.caption)}
                             class="hover:underline"
                             target="_blank"
                           >
@@ -120,12 +105,16 @@
         </details>
       </div>
     </div>
-    <div class="right-pane flex flex-col flex-grow justify-center items-center">
-      <div class="fixed top-1/2 transform -translate-y-1/2">
-        <iframe title="preview" class="bg-primary-130"></iframe>
-        <div class="italic mt-2 text-center">Fig.1 caption here</div>
+    {#if preview}
+      <div
+        class="right-pane flex flex-col flex-grow justify-center items-center px-4"
+      >
+        <div class="fixed top-1/2 transform -translate-y-1/2">
+          <img alt="preview" class="w-[400px] h-auto" src={preview} />
+          <div class="italic mt-2 text-center">{caption}</div>
+        </div>
       </div>
-    </div>
+    {/if}
   </main>
 </article>
 
