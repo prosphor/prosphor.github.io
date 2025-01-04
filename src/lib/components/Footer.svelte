@@ -1,4 +1,4 @@
-<footer class="font-freight text-primary-100 mx-auto mt-8 text-center sticky bottom-0 left-0 right-0">
+<footer class="font-freight text-primary-100 mt-8 sticky bottom-0">
   <div class="">
     <a
       href="https://open.spotify.com/user/14ar49bt5t17yc5qs42ubxrsc?si=42da7107b2404064"
@@ -58,3 +58,27 @@
     <p>nickxzhong [at] gmail [dot] com</p>
   </div>
 </footer>
+
+<style>
+  @media (max-width: 640px) {
+    footer {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    footer {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      margin-left: 15vw;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+</style>

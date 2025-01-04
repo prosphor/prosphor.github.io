@@ -7,7 +7,7 @@
   };
 </script>
 
-<footer class="font-freight text-{colors[page]} pb-8 mt-8  mx-auto text-center sticky bottom-0 left-0 right-0">
+<footer class="font-freight text-{colors[page]} pb-8 mt-8 sticky bottom-0">
   <div class="">
     <a href="https://github.com/prosphor" target="_blank" rel="noopener noreferrer" class="hover:underline">
       github
@@ -23,4 +23,25 @@
 </footer>
 
 <style>
+  @media (max-width: 640px) {
+    footer {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    footer {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      margin-left: 15vw;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 </style>

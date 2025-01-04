@@ -53,10 +53,10 @@
     </div>
     {#if preview}
       <div
-        class="right-pane flex flex-col flex-grow justify-center items-center px-4 ml-[30px]"
+        class="right-pane flex flex-col flex-grow justify-center items-center px-4 mr-[100px]"
       >
-        <div class="fixed top-[calc(50%-5px)] transform -translate-y-1/2">
-          <img alt="preview" class="w-auto h-[400px]" src={preview} />
+        <div class="fixed top-[calc(50%+40px)] transform -translate-y-1/2">
+          <img alt="preview" class="w-auto h-[350px]" src={preview} />
         </div>
       </div>
     {/if}

@@ -114,8 +114,8 @@
       <div
         class="right-pane flex flex-col flex-grow justify-center items-center px-4"
       >
-        <div class="fixed top-1/2 transform -translate-y-1/2">
-          <img alt="preview" class="w-[400px] h-auto" src={preview} />
+        <div class="fixed top-[calc(50%+40px)] transform -translate-y-1/2">
+          <img alt="preview" class="max-w-[400px] h-auto" src={preview} />
         </div>
       </div>
     {/if}
