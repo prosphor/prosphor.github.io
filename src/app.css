@@ -3,13 +3,6 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "GTAmerica";
-  src: url("/GTAmerica-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Freight";
   src: url("/freight_text_pro.ttf") format("truetype");
   font-weight: normal;

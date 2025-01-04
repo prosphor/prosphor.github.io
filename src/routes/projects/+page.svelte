@@ -9,7 +9,7 @@
   description="My relevant body of work"
 />
 
-<Header />
+<Header page="projects"/>
 
 <article class="font-americas text-[24px] text-primary-110">
   <main class="mt-[1.75rem]">
@@ -21,4 +21,4 @@
   </main>
 </article>
 
-<MinimalFooter />
+<MinimalFooter page="projects"/>

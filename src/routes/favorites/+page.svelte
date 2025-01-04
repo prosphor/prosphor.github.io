@@ -9,25 +9,22 @@
   description="a man with no favorites is a man mired in indecision"
 />
 
-<Header />
+<Header page="favorites"/>
 
-<article class="mx-12 text-primary-100 font-americas text-lg leading-[130%]">
-  <main class="flex w-full mt-12 mb-4">
+<article class="text-primary-130 font-freight text-[24px]">
+  <main class="flex w-full mt-[1.75rem]">
     <div id="left-pane" class="responsive-width">
       <div class="">
-        <p class="font-americas text-xl">
-          <span class="font-freight text-2xl font-bold italic underline">
-            favorites
-          </span>
-        </p>
+        <span class="font-freight text-[28px] font-bold italic underline">
+          favorites
+        </span>
         <p> 
-          I put a lot of stock in other people's favorites. <br />
-          Here are some of mine:
+          I put a lot of stock in other people's favorites. Here are some of mine:
         </p>
       </div>
       <div class="text-lg mt-4">
       </div>
-      <div class="text-lg mt-4">
+      <div class="mt-4">
         <p class="mb-4">
           ...and here are some quality things that are not
           necessarily my favorite:
@@ -46,7 +43,7 @@
   </main>
 </article>
 
-<MinimalFooter />
+<MinimalFooter page="favorites" />
 
 <style>
 </style>

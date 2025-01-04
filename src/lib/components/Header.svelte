@@ -1,39 +1,57 @@
-<header class="text-lg text-primary-100">
-  <nav class="flex">
-    <div class="flex flex-grow bg-primary-100 justify-center items-center">
-      <a href="/" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
-        钟
-      </a>
-    </div>
+<script lang="ts">
+  let { page }: { page: 'home' | 'projects' | 'thoughts' | 'favorites'} = $props();
 
-    <div class="flex flex-grow bg-primary-100 justify-center items-center">
-      <a href="/projects" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
-        工
-      </a>
-    </div>
+  const navItems = [
+    { label: "钟", href: "/", key: "home" },
+    { label: "工", href: "/projects", key: "projects" },
+    { label: "思", href: "/thoughts", key: "thoughts" },
+    { label: "喜", href: "/favorites", key: "favorites" },
+    { label: "历", href: "/pdf/Nick_Zhong_CV.pdf", key: "cv" },
+  ];
 
-    <div class="flex flex-grow bg-primary-100 justify-center items-center">
-      <a href="/thoughts" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
-        思
-      </a>
-    </div>
+  const colors: Record<string, string> = {
+    home: "primary-100",
+    projects: "primary-110",
+    thoughts: "primary-120",
+    favorites: "primary-130",
+  };
+  
+</script>
 
-    <div class="flex flex-grow bg-primary-100 justify-center items-center">
-      <a href="/favorites" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
-        喜
-      </a>
-    </div>
-
-    <div class="flex flex-grow bg-primary-100  justify-center items-center">
-      <a href="/pdf/Nick_Zhong_CV.pdf" class="text-primary-200 font-sk text-2xl font-thin flex items-center justify-center h-[calc(2.5rem)] text-center rounded-xl">
-        历
-      </a>
-    </div>
+<header class="text-lg">
+  <nav class="flex font-sk">
+    {#each navItems as { label, href, key }}
+        <a
+          {href}
+          class="flex flex-grow text-2xl font-thin flex items-center justify-center h-[2.5rem]"
+          class:bg-primary-100={page === key && colors[page] === "primary-100"}
+          class:bg-primary-110={page === key && colors[page] === "primary-110"}
+          class:bg-primary-120={page === key && colors[page] === "primary-120"}
+          class:bg-primary-130={page === key && colors[page] === "primary-130"}
+          class:text-primary-200={page === key}
+          class:text-primary-100={page !== key && colors[page] === "primary-100"}
+          class:text-primary-110={page !== key && colors[page] === "primary-110"}
+          class:text-primary-120={page !== key && colors[page] === "primary-120"}
+          class:text-primary-130={page !== key && colors[page] === "primary-130"}
+          class:border={page !== key}
+          class:border-primary-100={colors[page] === "primary-100"}
+          class:border-primary-110={colors[page] === "primary-110"}
+          class:border-primary-120={colors[page] === "primary-120"}
+          class:border-primary-130={colors[page] === "primary-130"}
+          class:hover:bg-primary-100={colors[page] === "primary-100" && page !== key}
+          class:hover:bg-primary-110={colors[page] === "primary-110" && page !== key}
+          class:hover:bg-primary-120={colors[page] === "primary-120" && page !== key}
+          class:hover:bg-primary-130={colors[page] === "primary-130" && page !== key}
+          class:hover:text-primary-200={page !== key}
+        >
+          {label}
+        </a>
+    {/each}
   </nav>
 </header>
 
 <style>
-    @media (max-width: 640px) {
+  @media (max-width: 640px) {
     header {
       width: 100%;
       margin-top: 3rem;

@@ -7,9 +7,9 @@
 
 <Seo title="Nick Zhong" description="A personal website for Nick Zhong" />
 
-<Header />
+<Header page="home" />
 
-<article class="text-primary-100 font-americas text-[24px]">
+<article class="text-primary-100 font-freight text-[24px]">
   <main class="mt-[1.75rem]">
     <p class="responsive-width">
       <a
@@ -17,11 +17,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span
-          class="font-freight font-bold italic text-[28px] leading-[100%] mr-0.5"
-        >
-          nick zhong</span
-        >
+        <span class="font-bold italic text-[28px]"> nick zhong</span>
       </a>
       is ever-curious, loves a good list, and dislikes handling tasks concurrently.
 
@@ -36,14 +32,9 @@
     </div>
     <div class="responsive-width">
       <br />
-      based in
-      <span class="text-[26px] leading-[100%]"
-        ><Link text="singapore" link="" /></span
-      >
+      based in <Link text="singapore" link="" />
       <br />
-      feel free to reach out<span class="font-freight font-bold text-[28px]"
-        >~</span
-      >
+      feel free to reach out<span class="font-bold text-[28px]">~</span>
       <br />
       <br />
     </div>

@@ -2,7 +2,7 @@
   let { text, link } = $props(); 
 </script>
 
-<a class="hover:underline hover:italic" href={link}>
+<a class="hover:underline hover:italic font-bold" href={link}>
   { text }
 </a>
 

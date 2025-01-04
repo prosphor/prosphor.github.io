@@ -10,7 +10,6 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        america: ["GTAmerica"],
         freight: ["Freight"],
         sk: ["Sim"],
       },

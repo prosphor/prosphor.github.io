@@ -8,7 +8,7 @@ stroke="currentColor"
 stroke-width="2"
 stroke-linecap="round"
 stroke-linejoin="round"
-class="ml-1 mt-[2.5px] lucide lucide-chevron-down"
+class="ml-1 lucide lucide-chevron-down"
 >
 <path d="m6 9 6 6 6-6" />
 </svg>

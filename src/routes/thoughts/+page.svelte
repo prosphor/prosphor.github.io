@@ -55,17 +55,17 @@
   description="The pen moves of its own volition; I am only asked to lay paper before it. Too often I forget."
 />
 
-<Header />
+<Header page="thoughts"/>
 
 <article class="font-freight text-[20px] text-primary-120">
-  <main class="responsive-width mt-[1.75rem]">
-    <p class="">
-      <span class="font-freight text-[28px] font-bold italic underline">
+  <main class="mt-[1.75rem]">
+    <p>
+      <span class="responsive-width font-freight text-[28px] font-bold italic underline">
         thoughts
       </span>
     </p>
     {#if !isIntroVisited}
-      <section class="layout-md paragraph-width">
+      <section class="layout-md responsive-width">
         {#each thoughts.starter as thought}
           <a
             class="block hover:bg-gray-100 py-1 px-2"
@@ -84,12 +84,12 @@
     {/if}
 
     <div
-      class={`button-container z-50 paragraph-width flex justify-end ${isIntroVisited ? "mt-12" : "mt-4"}`}
+      class="button-container z-50 responsive-width flex justify-end text-[16px]"
     >
-      <p class="mr-1">Sort By:</p>
+      <p class="mr-1 pt-0.5">Sort By:</p>
       <div class="relative">
         <button
-          class="pl-2 pr-1 bg-primary-100 text-primary-200 flex items-center"
+          class="bg-primary-120 text-primary-200 flex items-center justify-center pl-2 pr-2 pt-0.5"
           onclick={toggleDropdown}
         >
           Time
@@ -99,11 +99,11 @@
           <div
             class="absolute right-0 py-1 w-48 bg-primary-200 border border-gray-200 shadow-md z-50"
           >
-            <p class="px-4 py-1 text-primary-100 font-semibold border-b">
+            <p class="px-4 py-1 text-primary-120 font-semibold border-b border-primary-120">
               Date Published
             </p>
             <button
-              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
+              class="mt-0.5 w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
               onclick={() => handleSort("date-published", "desc")}
             >
               <span>Newest First</span>
@@ -134,11 +134,11 @@
               {/if}
             </button>
 
-            <p class="px-4 py-1 mt-2 text-primary-100 font-semibold border-b">
+            <p class="px-4 py-1 text-primary-120 font-bold border-b border-primary-120">
               Last Updated
             </p>
             <button
-              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
+              class="w-full px-4 py-1 mt-0.5 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
               onclick={() => handleSort("last-updated", "desc")}
             >
               <span>Newest First</span>
@@ -186,7 +186,7 @@
       </div>
     </div>
 
-    <section class="layout-md mt-2 paragraph-width">
+    <section class="layout-md mt-2 responsive-width">
       {#each published as thought}
         <a
           class="block hover:bg-gray-100 py-1 px-2"
@@ -194,7 +194,7 @@
           href={`/thoughts/${thought.filename}`}
           onclick={() => handleLinkClick(thought)}
         >
-          <div class="thought font-americas">
+          <div class="thought">
             <div>
               {thought.title}
             </div>
@@ -210,7 +210,7 @@
   </main>
 </article>
 
-<MinimalFooter />
+<MinimalFooter page="thoughts"/>
 
 <style>
   .thought {
@@ -220,24 +220,7 @@
   .spacer {
     flex: 1;
   }
-  .paragraph-width {
-    width: 100%;
-  }
-
   .visited {
-    color: #5f9ea0;
-    opacity: 0.75;
-  }
-
-  @media (min-width: 640px) {
-    .paragraph-width {
-      width: 75%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .paragraph-width {
-      width: 420px;
-    }
+    opacity: 0.3;
   }
 </style>

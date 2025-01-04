@@ -35,7 +35,7 @@
       class="hover:underline"
     >
       github
-    </a>,
+    </a> |
     <a
       href="https://mangadex.org/"
       target="_blank"
@@ -43,7 +43,7 @@
       class="hover:underline"
     >
       mangadex
-    </a>,
+    </a> |
     <a
       href="https://beliapp.com/"
       target="_blank"
