@@ -1,12 +1,10 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
-  import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
-  import type { PageData } from "./$types";
-  let { data }: { data: PageData } = $props();
+  import favorites from "$lib/layouts/favorites.yaml";
 
-  const favs = data.favorites.favs;
-  const likes = data.favorites.likes;
+  const favs = favorites.favs;
+  const likes = favorites.likes;
 
   let preview: string = $state("");
 
@@ -23,10 +21,8 @@
   description="a man with no favorites is a man mired in indecision"
 />
 
-<Header page="favorites" />
-
 <article class="text-primary-130 font-freight text-[20px]">
-  <main class="flex mt-[1.75rem]">
+  <div class="flex mt-[1.75rem]">
     <div id="left-pane" class="fav-width">
       <div class="">
         <span class="font-freight text-[28px] font-bold italic underline">
@@ -119,7 +115,7 @@
         </div>
       </div>
     {/if}
-  </main>
+  </div>
 </article>
 
 <MinimalFooter page="favorites" />

@@ -1,6 +1,5 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
-  import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
 
   import display from "$lib/layouts/projects.yaml";
@@ -9,10 +8,8 @@
 
 <Seo title="Nick Zhong" description="My relevant body of work" />
 
-<Header page="projects" />
-
 <article class="font-freight text-[22px] text-primary-110">
-  <main class="mt-[1.75rem]">
+  <div class="mt-[1.75rem]">
     <div class="responsive-width mb-2">
       <span class="font-freight text-[28px] font-bold italic underline">
         projects
@@ -61,7 +58,7 @@
         </div>
       </div>
     {/each}
-  </main>
+    </div>
 </article>
 
 <MinimalFooter page="projects" />

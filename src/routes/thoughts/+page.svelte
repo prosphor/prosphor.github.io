@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { browser } from "$app/environment";
   import Seo from "$lib/components/Seo.svelte";
-  import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
   import Dropdown from "$lib/components/Dropdown.svelte";
   import { convertToUTC } from "$lib/utils/timeConversion";
@@ -26,12 +26,14 @@
   let visited: { [filename: string]: string } = $state({});
   const isIntroVisited = $derived("introduction" in visited);
 
-  onMount(() => {
-    const stored = localStorage.getItem("visited-versions");
-    if (stored) {
-      visited = JSON.parse(stored);
-    }
-  });
+  if (browser) {
+    onMount(() => {
+      const stored = localStorage.getItem("visited-versions");
+      if (stored) {
+        visited = JSON.parse(stored);
+      }
+    });
+  }
 
   function toggleDropdown(): void {
     isDropdownOpen = !isDropdownOpen;
@@ -64,10 +66,8 @@
   description="The pen moves of its own volition; I am only asked to lay paper before it. Too often I forget."
 />
 
-<Header page="thoughts" />
-
 <article class="font-freight text-[22px] text-primary-120">
-  <main class="mt-[1.75rem]">
+  <div class="mt-[1.75rem]">
     <p>
       <span
         class="responsive-width font-freight text-[28px] font-bold italic underline"
@@ -152,7 +152,7 @@
         </a>
       {/each}
     </section>
-  </main>
+  </div>
 </article>
 
 <MinimalFooter page="thoughts" />

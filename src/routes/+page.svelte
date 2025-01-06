@@ -1,7 +1,6 @@
 <script lang="ts">
   import Link from "$lib/components/Link.svelte";
   import Seo from "$lib/components/Seo.svelte";
-  import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
   let preview: string = $state("");
@@ -15,8 +14,6 @@
 </script>
 
 <Seo title="Nick Zhong" description="A personal website for Nick Zhong" />
-
-<Header page="home" />
 
 <article class="text-primary-100 font-freight text-[24px]">
   <main class="flex mt-[1.75rem]">

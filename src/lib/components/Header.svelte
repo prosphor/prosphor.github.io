@@ -1,6 +1,12 @@
 <script lang="ts">
-  let { page }: { page: 'home' | 'projects' | 'thoughts' | 'favorites'} = $props();
+  import { page } from "$app/stores";
 
+  /**
+   * Navigation items:
+   * - `label` is what appears
+   * - `href` is the route
+   * - `key` helps us map to a "page key" for styling
+   */
   const navItems = [
     { label: "钟", href: "/", key: "home" },
     { label: "工", href: "/projects", key: "projects" },
@@ -9,75 +15,71 @@
     { label: "历", href: "/pdf/Nick_Zhong_CV.pdf", key: "cv" },
   ];
 
+  /**
+   * For each route key, we map it to a color variant (Tailwind style).
+   * You can add/edit these as needed.
+   */
   const colors: Record<string, string> = {
     home: "primary-100",
     projects: "primary-110",
     thoughts: "primary-120",
     favorites: "primary-130",
   };
-  
+
+  function getActiveKey(pathname: string): string {
+    if (pathname === "/") return "home";
+    const trimmed = pathname.replace(/\/$/, "");
+    const segments = trimmed.split("/");
+
+    switch (segments[1]) {
+      case "projects":
+        return "projects";
+      case "thoughts":
+        return "thoughts";
+      case "favorites":
+        return "favorites";
+      default:
+        return "";
+    }
+  }
+
+  function linkClasses(activeKey: string, linkKey: string): string {
+    const color = colors[activeKey];
+    const isActive = activeKey === linkKey;
+
+    let base =
+      "flex flex-grow text-2xl font-thin items-center justify-center h-[2.5rem]";
+
+    if (isActive) {
+      return `${base} bg-${color} text-primary-200`;
+    } else {
+      return [
+        base,
+        `text-${color}`,
+        `border border-${color}`,
+        `hover:bg-${color} hover:text-primary-200`,
+      ].join(" ");
+    }
+  }
 </script>
 
 <header class="text-lg">
   <nav class="flex font-sk">
     {#each navItems as { label, href, key }}
-      <a
-        href={href}
-        target={key === 'cv' ? '_blank' : '_self'}
-        rel="noopener noreferrer"
-        class="flex flex-grow text-2xl font-thin flex items-center justify-center h-[2.5rem]"
-        class:bg-primary-100={page === key && colors[page] === "primary-100"}
-        class:bg-primary-110={page === key && colors[page] === "primary-110"}
-        class:bg-primary-120={page === key && colors[page] === "primary-120"}
-        class:bg-primary-130={page === key && colors[page] === "primary-130"}
-        class:text-primary-200={page === key}
-        class:text-primary-100={page !== key && colors[page] === "primary-100"}
-        class:text-primary-110={page !== key && colors[page] === "primary-110"}
-        class:text-primary-120={page !== key && colors[page] === "primary-120"}
-        class:text-primary-130={page !== key && colors[page] === "primary-130"}
-        class:border={page !== key}
-        class:border-primary-100={colors[page] === "primary-100"}
-        class:border-primary-110={colors[page] === "primary-110"}
-        class:border-primary-120={colors[page] === "primary-120"}
-        class:border-primary-130={colors[page] === "primary-130"}
-        class:hover:bg-primary-100={colors[page] === "primary-100" && page !== key}
-        class:hover:bg-primary-110={colors[page] === "primary-110" && page !== key}
-        class:hover:bg-primary-120={colors[page] === "primary-120" && page !== key}
-        class:hover:bg-primary-130={colors[page] === "primary-130" && page !== key}
-        class:hover:text-primary-200={page !== key}
-      >
-        {label}
-      </a>
+      {#if key === "cv"}
+        <a
+          {href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses(getActiveKey($page.url.pathname), key)}
+        >
+          {label}
+        </a>
+      {:else}
+        <a {href} class={linkClasses(getActiveKey($page.url.pathname), key)}>
+          {label}
+        </a>
+      {/if}
     {/each}
   </nav>
 </header>
-
-<style>
-  @media (max-width: 640px) {
-    header {
-      width: 100%;
-      margin-top: 3rem;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-  }
-
-  @media (min-width: 640px) {
-    header {
-      width: 75%;
-      margin-top: 3rem;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    header {
-      width: 360px;
-      margin-top:15vh;
-      margin-left: 15vw;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-</style>
