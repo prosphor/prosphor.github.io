@@ -74,7 +74,7 @@
   @media (min-width: 768px) {
     header {
       width: 360px;
-      margin-top: 25vh;
+      margin-top:15vh;
       margin-left: 15vw;
       padding-left: 0;
       padding-right: 0;

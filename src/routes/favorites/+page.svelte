@@ -78,7 +78,7 @@
           favorite:
         </p>
         <details>
-          <summary class="mb-2 font-bold">good™</summary>
+          <summary class="mb-2 font-bold">my loved list</summary>
           <div class="px-4">
             {#each Object.entries(likes) as [key, value]}
               {#if Array.isArray(value)}

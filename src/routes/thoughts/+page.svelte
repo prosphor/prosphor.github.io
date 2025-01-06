@@ -4,7 +4,7 @@
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
   import thoughts from "$lib/thoughts/thoughts.yaml";
   import Checkmark from "$lib/components/Checkmark.svelte";
-  import Downarrow from "$lib/components/Downarrow.svelte";
+  import DownArrow from "$lib/components/DownArrow.svelte";
   import { convertToUTC } from "$lib/utils/timeConversion";
   import { onMount } from "svelte";
   let visited: string[] = $state([]);
@@ -95,7 +95,7 @@
           onclick={toggleDropdown}
         >
           Time
-          <Downarrow />
+          <DownArrow />
         </button>
         {#if isDropdownOpen}
           <div

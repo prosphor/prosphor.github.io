@@ -44,10 +44,8 @@
       </div>
       <div class="responsive-width">
         <br />
-        based in <Link text="singapore" link="" />
-        <br />
-        feel free to reach out<span class="font-bold text-[28px]">~</span>
-        <br />
+        <p class="mb-0.5">based in <Link text="sg" link="" /> and <Link text="nyc" link="" /></p>
+        <p>feel free to reach out<span class="font-bold text-[28px]">~</span></p>
         <br />
       </div>
     </div>
@@ -55,7 +53,7 @@
       <div
         class="right-pane flex flex-col flex-grow justify-center items-center px-4 mr-[100px]"
       >
-        <div class="fixed top-[calc(50%+40px)] transform -translate-y-1/2">
+        <div class="fixed top-1/2 transform -translate-y-1/2">
           <img alt="preview" class="w-auto h-[350px]" src={preview} />
         </div>
       </div>

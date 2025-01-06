@@ -1,9 +1,8 @@
 ---
 title: 2025 Resolutions
 publish-date: January 1, 2025
+note: Updates will occur throughout the year
 ---
-_Author's Note: Updates will occur throughout the year_
-
 ## Trying New Things
 1. The majority of my cooking last year was food prep/eating the same meal for weeks in a row. This year I'm going to make a new recipe once a month. 
 2. There's a backlog of classic albums I still need to listen to. I'm going to listen to a new album once a month.

@@ -1,0 +1,19 @@
+projects:
+  - title: Muse
+    date: January 15, 2025
+    topics: ["Generative AI"]
+    lead: The endless storytelling app
+    image: muse.webp
+    content: Building an interactive storytelling experience to help kids learn.
+    link: Website
+    url: https://joinmuse.ai/
+
+  - title: nickzhong.me
+    date: January 1, 2025
+    topics: ["Svelte", "Blog"]
+    lead: My personal homepage
+    image: personal-website.webp
+    content: | 
+      This site was built to better document my daily experiences. Made with SvelteKit.
+    link: GitHub
+    url: https://github.com/prosphor/prosphor.github.io

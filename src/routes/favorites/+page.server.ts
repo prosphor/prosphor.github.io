@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import favorites from '$lib/favorites/favorites.yaml';
+import favorites from '$lib/layouts/favorites.yaml';
 
 export const load: PageServerLoad = async () => {
   return {

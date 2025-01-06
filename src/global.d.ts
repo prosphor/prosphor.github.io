@@ -5,6 +5,7 @@ declare module "*.yaml";
 
 type SortField = "date-published" | "last-updated";
 type SortOrder = "asc" | "desc";
+
 type Thought = {
   filename: string;
   title: string;
@@ -16,5 +17,6 @@ type Thought = {
 type PostData = {
   title: string;
   date: string;
+  note: string;
   body: string;
 };

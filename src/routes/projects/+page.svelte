@@ -1,24 +1,91 @@
-<script>
+<script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
   import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
+
+  import display from "$lib/layouts/projects.yaml";
+  const projects = display.projects;
 </script>
 
-<Seo
-  title="Nick Zhong"
-  description="My relevant body of work"
-/>
+<Seo title="Nick Zhong" description="My relevant body of work" />
 
-<Header page="projects"/>
+<Header page="projects" />
 
-<article class="font-americas text-[24px] text-primary-110">
+<article class="font-freight text-[18px] text-primary-110">
   <main class="mt-[1.75rem]">
-    <p class=" responsive-width">
+    <div class="responsive-width mb-2">
       <span class="font-freight text-[28px] font-bold italic underline">
         projects
       </span>
-    </p>
+    </div>
+    {#each projects as project (project.title)}
+      <div class="flex">
+        <div class="project-width mb-4">
+          <div class="grid responsive-cols">
+            <div class="">
+              <div class="flex items-end space-between py-1">
+                <div class="flex-1 text-[22px] font-bold underline">
+                  {project.title}
+                </div>
+                <div class="text-[16px]">
+                  {project.date}
+                </div>
+                  
+              </div>
+              <div class="mt-2">
+                {project.content}
+              </div>
+              <div class="mt-4">
+                <a href={project.url}>
+                  <span class="font-bold">Links: </span>
+                  <span class="underline">{project.link}</span>
+                </a>
+              </div>
+              <div class="flex gap-x-2 mt-2 mb-4">
+                {#each project.topics as tag}
+                  <div
+                    class="flex rounded-xl bg-primary-110 text-primary-200 px-2 pt-0.5 text-[16px]"
+                  >
+                    {tag}
+                  </div>
+                {/each}
+              </div>
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                alt={project.title}
+                src="/images/{project.image}"
+                class="h-auto border rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    {/each}
   </main>
 </article>
 
-<MinimalFooter page="projects"/>
+<MinimalFooter page="projects" />
+
+<style>
+  @media (max-width: 640px) {
+    .responsive-cols {
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 640px) {
+    .responsive-cols {
+      gap: 2rem;
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .responsive-cols {
+      gap: 3rem;
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+</style>

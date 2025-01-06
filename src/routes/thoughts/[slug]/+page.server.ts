@@ -9,26 +9,31 @@ export async function load({ params }: { params: { slug: string } }) {
   let fileContent: string;
   try {
     fileContent = await fs.readFile(filePath, "utf-8");
-  } catch (err) {
-    throw error(404, `Post "${slug}" not found.`);
+  } catch (err: any) {
+    if (err.code === "ENOENT") {
+      throw error(404, `Post "${slug}" not found.`);
+    } else {
+      throw error(500, "An unexpected error occurred.");
+    }
   }
 
   const lines = fileContent.split("\n");
-  if (lines.length < 5 || !lines[0].startsWith("---")) {
+
+  if (lines.length < 6 || lines[0] !== "---" || lines[4] !== "---") {
     throw error(400, "Heading is missing or malformed.");
   }
 
-  const titleLine = lines[1];
-  const title = titleLine.replace("title:", "").trim().replace(/^"(.*)"$/, "$1");
-  const dateLine = lines[2];
-  const date = dateLine.replace("publish-date:", "").trim().replace(/^"(.*)"$/, "$1");
-  const markdownContent = lines.slice(4).join("\n");
+  const title = lines[1].replace("title:", "").trim().replace(/^"(.*)"$/, "$1");
+  const date= lines[2].replace("publish-date:", "").trim().replace(/^"(.*)"$/, "$1");
+  const note = lines[3].replace("note:", "").trim().replace(/^"(.*)"$/, "$1");
+  const body = lines.slice(5).join("\n");
 
   const postData: PostData = {
-    title: title,
-    date: date,
-    body: markdownContent,
+    title,
+    date,
+    note,
+    body,
   };
 
-  return postData;
+  return { postData };
 }
