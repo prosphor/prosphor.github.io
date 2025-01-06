@@ -29,7 +29,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="font-bold italic text-[28px]"> nick zhong</span>
+          <span class="font-bold italic text-[28px] mr-0.5"> nick zhong</span>
         </a>
         is ever-curious, loves a good list, and dislikes handling tasks concurrently.
 
@@ -44,8 +44,8 @@
       </div>
       <div class="responsive-width">
         <br />
-        <p class="mb-0.5">based in <Link text="sg" link="" /> and <Link text="nyc" link="" /></p>
-        <p>feel free to reach out<span class="font-bold text-[28px]">~</span></p>
+        <p class="leading-8">based in <Link text="sg" link="" /> and <Link text="nyc" link="" /></p>
+        <p class="leading-8">feel free to reach out<span class="font-bold text-[28px]">~</span></p>
         <br />
       </div>
     </div>

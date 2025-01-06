@@ -11,7 +11,7 @@
 
 <Header page="projects" />
 
-<article class="font-freight text-[18px] text-primary-110">
+<article class="font-freight text-[22px] text-primary-110">
   <main class="mt-[1.75rem]">
     <div class="responsive-width mb-2">
       <span class="font-freight text-[28px] font-bold italic underline">
@@ -20,28 +20,27 @@
     </div>
     {#each projects as project (project.title)}
       <div class="flex">
-        <div class="project-width mb-4">
+        <div class="project-width mb-12">
           <div class="grid responsive-cols">
             <div class="">
-              <div class="flex items-end space-between py-1">
-                <div class="flex-1 text-[22px] font-bold underline">
+              <h3 class="flex items-end space-between">
+                <span class="flex-1 font-bold">
                   {project.title}
-                </div>
-                <div class="text-[16px]">
+                </span>
+                <div class="flex justify-center text-[16px]">
                   {project.date}
                 </div>
-                  
-              </div>
-              <div class="mt-2">
+              </h3>
+              <div class="text-[16px] mt-4">
                 {project.content}
               </div>
-              <div class="mt-4">
+              <div class="mt-6 text-[16px]">
                 <a href={project.url}>
                   <span class="font-bold">Links: </span>
                   <span class="underline">{project.link}</span>
                 </a>
               </div>
-              <div class="flex gap-x-2 mt-2 mb-4">
+              <div class="flex gap-x-2 mt-2">
                 {#each project.topics as tag}
                   <div
                     class="flex rounded-xl bg-primary-110 text-primary-200 px-2 pt-0.5 text-[16px]"

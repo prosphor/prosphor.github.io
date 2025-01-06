@@ -2,30 +2,35 @@
   import Seo from "$lib/components/Seo.svelte";
   import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
-  import thoughts from "$lib/thoughts/thoughts.yaml";
-  import Checkmark from "$lib/components/Checkmark.svelte";
-  import DownArrow from "$lib/components/DownArrow.svelte";
+  import Dropdown from "$lib/components/Dropdown.svelte";
   import { convertToUTC } from "$lib/utils/timeConversion";
   import { onMount } from "svelte";
-  let visited: string[] = $state([]);
+  import thoughts from "$lib/layouts/thoughts.yaml";
+
+  const { published: publishedThoughts, starter: starterThoughts } = thoughts;
+
   let isDropdownOpen = $state(false);
   let sortField = $state("last-updated");
   let sortOrder = $state("desc");
 
-  const isIntroVisited = $derived(visited.includes("introduction"));
-
-  const published = $derived(
-    thoughts.published.slice().sort((a: Thought, b: Thought) => {
-      const dateA = new Date(a[sortField as keyof Thought]);
-      const dateB = new Date(b[sortField as keyof Thought]);
+  const sortedThoughts = $derived(
+    [...publishedThoughts].sort((a, b) => {
+      const dateA = new Date(a[sortField]);
+      const dateB = new Date(b[sortField]);
       return sortOrder === "desc"
-        ? dateB.getTime() - dateA.getTime()
-        : dateA.getTime() - dateB.getTime();
+        ? dateB.valueOf() - dateA.valueOf()
+        : dateA.valueOf() - dateB.valueOf();
     })
   );
 
+  let visited: { [filename: string]: string } = $state({});
+  const isIntroVisited = $derived("introduction" in visited);
+
   onMount(() => {
-    visited = JSON.parse(localStorage.getItem("visited") || "[]");
+    const stored = localStorage.getItem("visited-versions");
+    if (stored) {
+      visited = JSON.parse(stored);
+    }
   });
 
   function toggleDropdown(): void {
@@ -39,14 +44,18 @@
   }
 
   function handleLinkClick(thought: Thought): void {
-    if (!visited.includes(thought.filename)) {
-      visited.push(thought.filename);
-      localStorage.setItem("visited", JSON.stringify(visited));
-    }
+    visited[thought.filename] = thought["last-updated"];
+    localStorage.setItem("visited-versions", JSON.stringify(visited));
   }
 
   function isActive(field: SortField, order: SortOrder): boolean {
     return field === sortField && order === sortOrder;
+  }
+
+  function showAlertIcon(thought: Thought) {
+    const lastRead = visited[thought.filename];
+    if (!lastRead) return false;
+    return new Date(thought["last-updated"]) > new Date(lastRead);
   }
 </script>
 
@@ -57,7 +66,7 @@
 
 <Header page="thoughts" />
 
-<article class="font-freight text-[20px] text-primary-120">
+<article class="font-freight text-[22px] text-primary-120">
   <main class="mt-[1.75rem]">
     <p>
       <span
@@ -74,140 +83,71 @@
             onclick={() => handleLinkClick(thought)}
             href={`/thoughts/${thought.filename}`}
           >
-            <div>
+            <h3>
               {thought.title}
-            </div>
-            <div class="text-sm italic">
+            </h3>
+            <p class="text-[16px] italic">
               {thought.summary}
-            </div>
+            </p>
           </a>
         {/each}
       </section>
     {/if}
-
-    <div
-      class="button-container z-50 responsive-width flex justify-end text-[16px]"
-    >
-      <p class="mr-1 pt-0.5">Sort By:</p>
-      <div class="relative">
-        <button
-          class="bg-primary-120 text-primary-200 flex items-center justify-center pl-2.5 pr-1.5 pt-0.5"
-          onclick={toggleDropdown}
-        >
-          Time
-          <DownArrow />
-        </button>
-        {#if isDropdownOpen}
-          <div
-            class="absolute right-0 py-1 w-48 bg-primary-200 border border-gray-200 shadow-md z-50"
-          >
-            <p
-              class="px-4 py-1 text-primary-120 font-bold border-b border-primary-120"
-            >
-              Last Updated
-            </p>
-            <button
-              class="w-full px-4 py-1 mt-0.5 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("last-updated", "desc")}
-            >
-              <span>Newest First</span>
-              {#if isActive("last-updated", "desc")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              {/if}
-            </button>
-            <button
-              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("last-updated", "asc")}
-            >
-              <span>Oldest First</span>
-              {#if isActive("last-updated", "asc")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              {/if}
-            </button>
-            <p
-              class="px-4 py-1 text-primary-120 font-semibold border-b border-primary-120"
-            >
-              Date Published
-            </p>
-            <button
-              class="mt-0.5 w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("date-published", "desc")}
-            >
-              <span>Newest First</span>
-              {#if isActive("date-published", "desc")}
-                <Checkmark />
-              {/if}
-            </button>
-            <button
-              class="w-full px-4 py-1 hover:bg-gray-100 cursor-pointer flex justify-between items-center"
-              onclick={() => handleSort("date-published", "asc")}
-            >
-              <span>Oldest First</span>
-              {#if isActive("date-published", "asc")}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              {/if}
-            </button>
-          </div>
-        {/if}
-      </div>
-    </div>
-
+    <Dropdown {toggleDropdown} {isDropdownOpen} {handleSort} {isActive} />
     <section class="layout-md mt-2 responsive-width">
-      {#each published as thought}
+      {#each sortedThoughts as thought (thought.filename)}
         <a
           class="block hover:bg-gray-100 py-1 px-2"
-          class:visited={visited.includes(thought.filename)}
           href={`/thoughts/${thought.filename}`}
           onclick={() => handleLinkClick(thought)}
         >
           <div class="thought">
             <div>
-              {thought.title}
+              <div class="flex items-center">
+                <h3 class:visited={thought.filename in visited}>
+                  {thought.title}
+                </h3>
+                {#if showAlertIcon(thought)}
+                  <div class="relative group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#16167d"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="flex justify-center items-center ml-2 mb-0.5 opacity-100"
+                      ><title>New content available</title>
+                      <circle cx="12" cy="12" r="10" /><line
+                        x1="12"
+                        x2="12"
+                        y1="8"
+                        y2="12"
+                      /><line x1="12" x2="12.01" y1="16" y2="16" /></svg
+                    >
+                    <span
+                      class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-primary-120 text-white text-sm px-2 py-1 rounded shadow-lg"
+                    >
+                      New update on {convertToUTC(thought['last-updated'])}
+                    </span>
+                  </div>
+                {/if}
+              </div>
+              <p
+                class:visited={thought.filename in visited}
+                class="font-freight font-thin italic text-[16px]"
+              >
+                {thought.summary}
+              </p>
             </div>
             <span class="spacer"></span>
-            <span class="text-sm">{convertToUTC(thought[sortField])}</span>
-          </div>
-          <div class="font-freight font-thin italic text-sm">
-            {thought.summary}
+            <span
+              class:visited={thought.filename in visited}
+              class="text-[16px]">{convertToUTC(thought[sortField])}</span
+            >
           </div>
         </a>
       {/each}

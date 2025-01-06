@@ -14,6 +14,6 @@ projects:
     lead: My personal homepage
     image: personal-website.webp
     content: | 
-      This site was built to better document my daily experiences. Made with SvelteKit.
+      Documentation for my post-college journeys. Made with SvelteKit.
     link: GitHub
     url: https://github.com/prosphor/prosphor.github.io
