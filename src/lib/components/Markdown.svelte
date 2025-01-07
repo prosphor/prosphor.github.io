@@ -23,7 +23,7 @@
   `;
   };
 
-  renderer.text = (token: { raw: string }): string => {
+  renderer.paragraph = (token: { raw: string }): string => {
     let text = token.raw;
 
     text = text.replace(/(?<!\w)\$(.+?)\$(?!\w)/g, (match, math) => {

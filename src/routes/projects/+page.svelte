@@ -1,5 +1,6 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
+  import Header from "$lib/components/Header.svelte";
   import MinimalFooter from "$lib/components/MinimalFooter.svelte";
 
   import display from "$lib/layouts/projects.yaml";

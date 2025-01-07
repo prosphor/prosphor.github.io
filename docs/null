@@ -17,11 +17,11 @@
 		<link rel="preload" href="/fonts/freight-text-pro_normal_700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 		<link rel="preload" href="/fonts/simkai-limited.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.B-fDUPU1.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/entry.CitKJstn.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.DmaXW1DG.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.DwjvHYH-.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.C8hakOeC.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.DRhZnABc.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.BcL6AD4C.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.ucIVQpAW.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.NPOJ68_k.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/if.mZF-4KgY.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/props.xuBvimxb.js">
@@ -33,15 +33,15 @@
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_136md0z = {
+					__sveltekit_hkp9y0 = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.B-fDUPU1.js"),
-						import("/_app/immutable/entry/app.BcL6AD4C.js")
+						import("/_app/immutable/entry/start.DmaXW1DG.js"),
+						import("/_app/immutable/entry/app.ucIVQpAW.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});

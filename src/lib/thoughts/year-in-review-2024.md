@@ -3,10 +3,13 @@ title: "Year in Review: 2024"
 publish-date: December 31, 2024
 note:
 ---
-They say the years grow shorter as you grow older, but 2024 has undoubtedly been the longest year of my life thus far.
+They say the years grow shorter as you grow older, but 2024 has undoubtedly felt like the longest year of my life. 
+2024 has been a year of health and happiness, staked, claimed, and ground out.
+
+The days stretched out even as early sunsets encroached on already chilly Pittsburgh afternoons.
 
 ## Milestones
-After 4.5 arduous years, I finally graduated college in December. I'm grateful to be still graduating in my expected year despite taking three semesters of leave.
+After 4.5 largely unfulfilling years, I'm more relieved than anything to finally have graduated college this December. I'm grateful to be still graduating in my expected year despite taking three semesters of leave.
 
 ## Adventures
 I visited three new countries this year:
@@ -66,7 +69,7 @@ I visited 4 new art museums this year:
 3. SF MOMA
 4. Carnegie Museum of Art (embarassingly late)
 
-Of these, my favorite exhibit was [Denyse Thomasos: just beyond](https://www.vanartgallery.bc.ca/exhibitions/denysethomasos)
+Of these, my favorite exhibit was [DENYSE THOMAS: JUST BEYOND](https://www.vanartgallery.bc.ca/exhibitions/denysethomasos)
 
 I watched six movies, my favorite of which was DiDi.
 
